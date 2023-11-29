@@ -7,9 +7,8 @@ const prevBtn = document.querySelector("#prevBtn");
 nextBtn.addEventListener("click", function () {
   changeSlide(1);
 });
-prevBtn.addEventListener("click", function () {
-  changeSlide(-1);
-});
+
+prevBtn.addEventListener("click", showSlide);
 
 function showSlide(index) {
   // recalculate the currentSlide
