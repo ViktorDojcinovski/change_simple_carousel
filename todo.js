@@ -1,4 +1,3 @@
-let nextBtn = document.getElementById("addTaskBtn");
 let inputTask = document.getElementById("newTask");
 let taskList = document.getElementById("taskList");
 
@@ -25,8 +24,6 @@ function onClickCreateTask() {
   inputTask.value = "";
 }
 
-nextBtn.addEventListener("click", onClickCreateTask);
-
 function onClickComplete(event) {
   let listElement = event.target.parentElement;
 
@@ -43,3 +40,5 @@ function onClickDelete(event) {
   let element = event.target.closest("li");
   element.remove(element);
 }
+
+export { onClickCreateTask };

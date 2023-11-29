@@ -1,14 +1,6 @@
 let currentSlide = 0;
 const totalSlides = document.querySelectorAll(".slide").length;
 const carousel = document.querySelector(".carousel");
-const nextBtn = document.querySelector("#nextBtn");
-const prevBtn = document.querySelector("#prevBtn");
-
-nextBtn.addEventListener("click", function () {
-  changeSlide(1);
-});
-
-prevBtn.addEventListener("click", showSlide);
 
 function showSlide(index) {
   // recalculate the currentSlide
@@ -24,3 +16,5 @@ function changeSlide(direction) {
   let index = currentSlide + direction;
   showSlide(index);
 }
+
+export { changeSlide };
